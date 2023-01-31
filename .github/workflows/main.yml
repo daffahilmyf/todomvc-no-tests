@@ -43,6 +43,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: Check folder
+        run: ls
+      
       - name: Install dependencies
         run: pnpm install
         
