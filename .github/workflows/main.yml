@@ -46,20 +46,23 @@ jobs:
       - name: Install dependencies
         run: pnpm install
         
-      - name: Build application
-        run: pnpm run build
+      - name: Start application
+        run: |
+          pnpm run build
+          pnpm run start
         
       - name: create folder
         run: |
           mkdir test
           cd test
+          git clone https://github.com/daffahilmyf/cypress-repo.git
+          pnpm install
+          
+      - name: Check folder
+        run: |
+          cd ..
+          ls
+      
+          
         
-  
-      - name: Check out my other private repo
-        uses: actions/checkout@v3
-        with:
-          repository: daffahilmyf/cypress-repo
-
-      - name: check ls
-        run: ls
       
