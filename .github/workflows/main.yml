@@ -59,8 +59,10 @@ jobs:
           
       - name: Check folder
         run: |
+          echo "Root Folder"
           ls
-          cd ..
+          echo "Cypress Folder"
+          cd ./test
           ls
       
           
