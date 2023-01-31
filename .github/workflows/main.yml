@@ -59,6 +59,7 @@ jobs:
           
       - name: Check folder
         run: |
+          ls
           cd ..
           ls
       
