@@ -42,9 +42,6 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-
-      - name: Check folder
-        run: ls
       
       - name: Install dependencies
         run: pnpm install
@@ -52,9 +49,19 @@ jobs:
       - name: Build application
         run: pnpm run build
         
+      - name: create folder
+        run: |
+          - mkdir test
+          - cd test
+        
+  
       - name: Check out my other private repo
         uses: actions/checkout@v3
         with:
           repository: daffahilmyf/cypress-repo
-      - run:  ls
+
+      - name: check ls
+        run: |
+          - cd 
+          - ls
       
