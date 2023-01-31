@@ -49,7 +49,6 @@ jobs:
       - name: Start application
         run: |
           pnpm run build
-          pnpm run start
         
       - name: create folder
         run: |
