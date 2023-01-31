@@ -61,7 +61,5 @@ jobs:
           repository: daffahilmyf/cypress-repo
 
       - name: check ls
-        run: |
-          cd 
-          ls
+        run: ls
       
